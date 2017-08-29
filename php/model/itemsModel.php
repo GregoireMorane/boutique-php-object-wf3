@@ -118,6 +118,11 @@ class ItemsModel extends Model
 		return $this->select("i.*, c.name as categories", "items i, categories c", "i.`categories_idcategories` = c.idcategories AND i.iditems = ".$id." GROUP BY i.iditems");
 	}
 
+	public function listCategories()
+	{
+		return $this->select("name", "categories");
+	}
+
 }
 
 // $test = new ItemsModel();

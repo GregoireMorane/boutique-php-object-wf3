@@ -1,14 +1,17 @@
 <?php
 
-require "php/model/itemsModel.php";
-class ApiController
+require "Controller.php";
+class ApiController extends Controller
 {
+	public function __construct()
+	{
+		parent::__construct();
+	}
+
 	public function detailItem($id)
 	{
-		$dbItem = new ItemsModel();
-		$pictureItems = $dbItem->listenerPictureItem($id);
-		$reviewsItems = $dbItem->listenerReviewsItem($id);
-		//echo json_encode(array("pictures"=>$pictureItems));
+		$pictureItems = $this->itemsModel->listenerPictureItem($id);
+		$reviewsItems = $this->itemsModel->listenerReviewsItem($id);
 		echo json_encode(array("pictures"=>$pictureItems,"reviews"=>$reviewsItems));
 	}
 }

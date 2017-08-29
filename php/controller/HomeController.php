@@ -1,12 +1,17 @@
 <?php
 
-class HomeController
+require "Controller.php";
+class HomeController extends Controller
 {
+	public function __construct()
+	{
+		parent::__construct();
+	}
+
 	public function home()
 	{
-		require "php/model/itemsModel.php";
-		$dbItem = new ItemsModel();
-		$itemsHome = $dbItem->showItems();
+		//var_dump($this->itemsModel);die();
+		$itemsHome = $this->itemsModel->showItems();
 		include("home.php");
 	}
 }

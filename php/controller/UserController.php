@@ -1,8 +1,9 @@
 <?php
 
+require "Controller.php";
 require "php/model/users.php";
 
-class UsersController
+class UsersController extends Controller
 {
 	public function addUser()
 	{
@@ -40,30 +41,6 @@ class UsersController
 			$this->clientAddSession($_POST);
 			header('Location:'.HOST.FOLDER);
 		}
-	}
-
-	public function arrayIsEmpty($data = array(), $keyObligatory = array())
-	{
-		if(!is_array($data))
-		{
-			return -1;
-		}
-		$isOk = false;
-		foreach($data as $key => $val)
-		{
-			foreach($keyObligatory as $keyO => $valO)
-			{
-				if($keyO == $key)
-				{
-					$isOk = true;
-				}
-			}
-			if(!$isOk || empty(trim($val)))
-			{
-				return -1;
-			}
-		}
-		return 1;
 	}
 
 	public function clientAddSession($user = array())
