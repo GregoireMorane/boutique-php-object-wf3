@@ -15,6 +15,9 @@ require("header.php");
 					<div class="col-md-6">
 						<div class="single-img">
 							<div class="sp-wrap" id="listPicture">
+								<a href="images/1.jpg"><img src="<?php echo HOST.FOLDER ?>images/1_tb.jpg" alt=''></a>
+								<a href="images/2.jpg"><img src="<?php echo HOST.FOLDER ?>images/2_tb.jpg" alt=''></a>
+								<a href="images/3.jpg"><img src="<?php echo HOST.FOLDER ?>images/3_tb.jpg" alt=''></a>
 							</div>
 							<div id="test"></div>
 						</div>
@@ -55,31 +58,6 @@ require("header.php");
 						    	<p><span>Product Code:</span><?php echo $itemsHome[0]["code_item"] ?></p>
 						    	<p><span>Availability:</span><?php echo $itemsHome[0]["availabity"] ?></p>	
 						    </div>
-
-							<div class="single-inputs row">
-								<div class="col-md-6">
-									<select class="select">
-										<option value="Select Size">Select Size</option>
-										<option value="S">S</option>
-										<option value="M">M</option>
-										<option value="L">L</option>
-										<option value="XL">XL</option>
-										<option value="XXL">XXL</option>
-									</select>
-								</div>
-								<div class="col-md-6">
-									<select class="select">
-										<option value="Select Color">Select Color</option>
-										<option value="White">White</option>
-										<option value="Black">Black</option>
-										<option value="Red">Red</option>
-										<option value="Blue">Blue</option>
-										<option value="Green">Green</option>
-									</select>
-								</div>
-							</div>
-						    
-
 								
 							<div class="prod-end">
 								<a href="#" class="medium-button button-red add-cart">Add to Cart</a>
@@ -351,7 +329,8 @@ require("header.php");
     <!-- optionally include helper plugins -->
     <script type="text/javascript" src="<?php echo HOST.FOLDER ?>js/jquery.mousewheel.min.js"></script>
     <script type="text/javascript" src="<?php echo HOST.FOLDER ?>js/jquery.touchSwipe.min.js"></script>
-    <script type="text/javascript" src="<?php echo HOST.FOLDER ?>js/Mike.js"></script>
+	<script type="text/javascript" src="<?php echo HOST.FOLDER ?>js/Mike.js"></script>
+
 	
 </body>
 </html>

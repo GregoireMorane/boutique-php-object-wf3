@@ -22,6 +22,13 @@ class singleShopController extends Controller
 			echo "<script>let idItem = ".$itemsHome[0]["iditems"].";let typePage = 1;</script>";
 		}
 	}
+
+	public function shopListView()
+	{
+		$itemsHome = $this->itemsModel->showItems();
+		require("shop-list.php");
+		echo "<script>let typePage = 2;</script>";
+	}
 }
 
 ?>

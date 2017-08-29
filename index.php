@@ -33,6 +33,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 			$apiController->detailItem((int)$id);
 		break;
 
+		case FOLDER."shop-list":
+			require "php/controller/ApiController.php";
+			$apiController = new ApiController();
+			$apiController->searchItem();
+		break;
+
 		default:
 			header("Location:".HOST.FOLDER."404");
 	}
@@ -61,8 +67,15 @@ elseif($_SERVER["REQUEST_METHOD"] == "GET")
 			$shop->single((int)$id);
 		break;
 
+		case FOLDER."shop-list":
+			require "php/controller/singleShopController.php";
+			$shop = new singleShopController();
+			$shop->shopListView();
+		break;
+
 		case FOLDER."404":
-			include("404.php");
+			require "php/Controller/controller.php";
+			Controller::show404();
 		break;
 
 		default:

@@ -35,6 +35,11 @@ class Controller
 		}
 		return 1;
 	}
+
+	public static function show404()
+	{
+		include("404.php");
+	}
 }
 
 ?>
