@@ -148,7 +148,7 @@ require("header.php");
 										<div class="col-md-8">
 											<div class="list-content">
 
-												<h1><?php echo $item["libelle"] ?></h1>
+												<a href="<?php echo HOST.FOLDER."single/".$item["iditems"] ?>"><h1><?php echo $item["libelle"] ?></h1></a>
 
 												<div class="list-midrow">
 
@@ -163,7 +163,7 @@ require("header.php");
 													<div class="clear"></div>
 												</div>
 
-												<p class="list-desc"><?php echo $item["comment"] ?></p>
+												<p class="list-desc"><?php echo $item["description"] ?></p>
 
 												<div class="list-downrow">
 
