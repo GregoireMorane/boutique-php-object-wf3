@@ -123,38 +123,10 @@
 						</div>
 						<div class="hover-cart">
 
-							<div class="hover-box">
 
-								<a href="#"><img src="<?php echo HOST.FOLDER ?>images/hover1.png" alt="" class="left-hover"></a>
-								<div class="hover-details">
-									<p>Grey California Dress</p>
-									<span>$ 3 199.00</span>
-									<div class="quantity">Quantity: 1</div>
-								</div>
-								
-								<a href="#" class="right-hover"><img src="<?php echo HOST.FOLDER ?>images/delete.png" alt=""></a>
-
-								<div class="clear"></div>
-
-							</div>
-
-							<div class="hover-box bd0">
-
-								<img src="<?php echo HOST.FOLDER ?>images/hover2.png" alt="" class="left-hover">
-								<div class="hover-details">
-									<p>Grey California Dress</p>
-									<span>$ 3 199.00</span>
-									<div class="quantity">Quantity: 1</div>
-								</div>
-
-								<a href="#" class="right-hover"><img src="<?php echo HOST.FOLDER ?>images/delete.png" alt=""></a>
-
-								<div class="clear"></div>
-
-							</div>
 
 							<div class="subtotal">
-								Cart Subtotal: <span>$ 4 372</span>
+								Cart Subtotal: <span>0$</span>
 							</div>
 
 							<button class="viewcard"> View Cart</button>
@@ -207,3 +179,6 @@
 
 		</header>
 		<!-- End Header -->
+		<script>
+			let hostDomaine = "<?php echo HOST.FOLDER ?>"
+		</script>

@@ -40,6 +40,11 @@ class Controller
 	{
 		include("404.php");
 	}
+
+	public function __destruct()
+	{
+		
+	}
 }
 
 ?>

@@ -492,27 +492,6 @@ require("header.php");
 
 
 
-	        
-		</footer>
-		<!-- End footer -->
-
-
-
-        
-
-
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery.superfish.js"></script>
-	<script type="text/javascript" src="js/jquery.bxslider.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
-	<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
-  	<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
-	<script type="text/javascript" src="js/jquery.imagesloaded.min.js"></script>
-     <!-- jQuery KenBurn Slider  -->
-    <script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
-
-
 	<!--
 	##############################
 	 - ACTIVATE THE BANNER HERE -
@@ -607,8 +586,11 @@ require("header.php");
 					});
 				// END OF THE SECTION, HIDE MY ARROWS SEPERATLY FROM THE BULLETS
 			});
+			$ = tpj;
+			let typePage = 0;
 	</script>
-
 	
-</body>
-</html>
+<script type="text/javascript" src="<?php echo HOST.FOLDER ?>js/Mike.js"></script>
+
+
+<?php require("footer.php") ?>

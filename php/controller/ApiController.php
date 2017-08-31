@@ -30,12 +30,15 @@ class ApiController extends Controller
 			$sql .= " categories_idcategories = ".$_POST["categorie"]." AND ";
 			$search == true;
 		}
-		$sql = substr($sql, 0, -4);
 		if($search == false)
 		{
 			$sql = 1;
 		}
-		$items = $this->itemsModel->select("*", "items", $sql);
+		else
+		{
+			$sql .= " iditems = items_iditems GROUP BY iditems ";
+		}
+		$items = $this->itemsModel->select("i.*, p.url", "items i, pictures p", $sql);
 		echo json_encode($items);
 	}
 }

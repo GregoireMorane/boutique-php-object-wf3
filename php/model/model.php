@@ -17,7 +17,7 @@ class Model // CreateReadUpdateDelete
 		$this->pdo = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->database, $this->user, $this->password, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
 	}
 
-	public function select($champs = "", $table = "", $where = 1)
+	public function select($champs = "*", $table = "", $where = 1)
 	{
 		$theChamps = $this->arrayToString($champs);
 		$theWhere = $this->arrayToString($where, "update");

@@ -120,7 +120,7 @@ class ItemsModel extends Model
 
 	public function listCategories()
 	{
-		return $this->select("name", "categories");
+		return $this->select("idcategories, name", "categories");
 	}
 
 }
