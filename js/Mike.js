@@ -90,6 +90,7 @@ $(function()
 		default:
 			console.log("OK");
 	}
+
 	function listerEven()
 	{
 		$("a.medium-button.button-red.add-cart")
@@ -115,7 +116,7 @@ $(function()
 					}
 				}
 
-				if(!update)
+				if(update == false)
 				{
 					item.qte = 1;
 					datalocal.push(item);

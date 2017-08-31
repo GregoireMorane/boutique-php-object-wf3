@@ -99,10 +99,8 @@ class ItemsModel extends Model
 		return $this->select("note, commentaire, CONCAT(firstname, ' ' ,lastname) as username", "reviews, clients", "items_iditems = $id AND clients_idclients = idclients");
 	}
 
-	public function showItems($nbItem = 8)
-	{
-		if(!is_int($nbItem))
-		{
+	public function showItems($nbItem = 8){
+		if(!is_int($nbItem)){
 			return -1;
 		}
 		return $this->select( "i.*, p.url", "`pictures` p, items i", "p.`items_iditems` = i.iditems GROUP BY i.iditems LIMIT ".$nbItem );

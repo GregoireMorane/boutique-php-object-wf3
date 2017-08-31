@@ -277,7 +277,7 @@ require("header.php");
 										<img src="<?php echo $item["url"] ?>" alt="">
 										<img src="upload/new.png" alt="" class="new">
 										<div class="arrival-mask">
-											<a href="#" class="medium-button button-red add-cart">Add to Cart</a>
+											<a href="#" id="items-<?php echo $item['iditems'] ?>"class="medium-button button-red add-cart">Add to Cart</a>
 											<a href="#" class="wishlist"><i class="fa fa-heart"></i> Add to Wishlist</a>
 											<a href="#" class="compare"><i class="fa fa-retweet"></i>Add to Compare</a>
 										</div>

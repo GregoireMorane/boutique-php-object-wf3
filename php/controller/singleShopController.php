@@ -17,8 +17,8 @@ class singleShopController extends Controller
 		}
 		else
 		{
-			$itemsSingle = $this->itemsModel->showItems($id);
-			require "shop-single.php";
+			$itemsSingle = $this->itemsModel->showItems();
+			require("shop-single.php");
 			echo "<script>let idItem = ".$itemsHome[0]["iditems"].";let typePage = 1;</script>";
 		}
 	}
